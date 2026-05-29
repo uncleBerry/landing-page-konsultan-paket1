@@ -1,0 +1,149 @@
+---
+const WA_URL = 'https://wa.me/6280000000000?text=Halo%2C%20saya%20butuh%20bantuan%20urus%20SBU%20untuk%20PT%20saya%21';
+
+const stats = [
+  { value: '500+',  label: 'Klien Aktif'     },
+  { value: '3 Hari', label: 'Proses Tercepat' },
+  { value: '100%',  label: 'Garansi Legal'   },
+];
+---
+
+<section class="relative bg-navy-900 overflow-hidden pt-16 md:pt-20">
+
+  <!-- Decorative blobs -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-navy-700 opacity-25 blur-3xl"></div>
+    <div class="absolute bottom-0 -left-20 w-80 h-80 rounded-full bg-navy-950 opacity-60 blur-2xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600 opacity-5 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-4 py-14 md:py-24 flex flex-col md:flex-row md:items-center gap-12 md:gap-16">
+
+    <!-- ── LEFT: Text Content ── -->
+    <div class="flex-1 text-white" data-aos="fade-up">
+
+      <!-- Urgency badge -->
+      <div class="inline-flex items-center gap-2 bg-orange-500 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-6 shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-white animate-pulse shrink-0"></span>
+        Layanan #1 Pengurusan SBU Konstruksi Indonesia
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+        Jasa Pengurusan SBU Konstruksi{' '}
+        <span class="text-orange-400">Kilat</span> &amp;{' '}
+        <span class="text-emerald-400">100% Legal</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-blue-100 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+        Jangan sampai ketinggalan tender besar! Kami bantu selesaikan berkas SBU &amp; SKK Anda dengan proses tercepat. Langsung terbit di portal resmi pemerintah.
+      </p>
+
+      <!-- Stats row -->
+      <div class="flex flex-wrap gap-8 mb-10">
+        {stats.map(s => (
+          <div class="text-center">
+            <p class="text-2xl font-extrabold text-orange-400 leading-none">{s.value}</p>
+            <p class="text-blue-300 text-sm mt-1">{s.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA Button with pulse animation -->
+      <a
+        href={WA_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 animate-pulse-cta shadow-xl shadow-orange-500/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+        aria-label="Konsultasi gratis via WhatsApp"
+      >
+        <!-- WA icon -->
+        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Konsultasi Gratis via WhatsApp
+      </a>
+
+      <p class="text-blue-300 text-sm mt-4">
+        ✅ Respon &lt; 5 menit &nbsp;•&nbsp; ✅ Tanpa biaya tersembunyi &nbsp;•&nbsp; ✅ Gratis konsultasi awal
+      </p>
+    </div>
+
+    <!-- ── RIGHT: Certificate Visual (600×400) ── -->
+    <div class="flex-1 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+      <div class="relative w-full max-w-sm md:max-w-[480px]">
+
+        <!-- Main card (represents SBU certificate) -->
+        <div
+          class="bg-white rounded-2xl shadow-2xl p-8"
+          role="img"
+          aria-label="Ilustrasi sertifikat SBU Konstruksi resmi"
+        >
+          <!-- Issuer header -->
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-navy-900 font-bold text-sm">KEMENTERIAN PUPR</p>
+              <p class="text-gray-400 text-xs">Republik Indonesia</p>
+            </div>
+            <!-- Official seal watermark -->
+            <div class="ml-auto text-gray-100 text-4xl select-none" aria-hidden="true">⊕</div>
+          </div>
+
+          <!-- Certificate body -->
+          <div class="border-2 border-dashed border-gray-200 rounded-xl p-5 mb-6">
+            <p class="text-center text-xs text-gray-400 uppercase tracking-widest mb-1">Sertifikat Badan Usaha</p>
+            <p class="text-center text-navy-900 text-2xl font-black mb-4">SBU KONSTRUKSI</p>
+            <div class="space-y-2.5">
+              {['No. Sertifikat', 'Nama Badan Usaha', 'Kualifikasi', 'Sub Klasifikasi', 'Berlaku s/d'].map(label => (
+                <div class="flex justify-between items-center text-xs gap-4">
+                  <span class="text-gray-400 shrink-0">{label}</span>
+                  <span class="flex-1 h-3 bg-gray-100 rounded-full animate-pulse"></span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-10 h-10 rounded-full border-[3px] border-navy-900 flex items-center justify-center">
+                <div class="w-4 h-4 bg-navy-900 rounded-full"></div>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">Status</p>
+                <p class="text-emerald-600 text-xs font-bold">TERVERIFIKASI ✓</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-gray-400">Diterbitkan</p>
+              <p class="text-navy-900 text-xs font-semibold">LPJK PUPR 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <span class="absolute -top-3 -right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 select-none">
+          ✓ 100% Legal
+        </span>
+        <span class="absolute -bottom-3 -left-3 bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10 select-none">
+          ⚡ Proses 3 Hari
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom wave divider -->
+  <div class="relative -mb-px" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-10 md:h-16">
+      <path d="M0 60 C360 0 1080 0 1440 60 L1440 60 L0 60Z" fill="#f5f7fb"/>
+    </svg>
+  </div>
+</section>

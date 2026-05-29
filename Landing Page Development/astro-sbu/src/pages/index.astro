@@ -1,0 +1,58 @@
+---
+import Layout          from '@/layouts/Layout.astro';
+import Navbar          from '@/components/Navbar.astro';
+import HeroSection     from '@/components/HeroSection.astro';
+import ClientLogos     from '@/components/ClientLogos.astro';
+import ProblemSection  from '@/components/ProblemSection.astro';
+import SolutionSection from '@/components/SolutionSection.astro';
+import WorkflowSection from '@/components/WorkflowSection.astro';
+import TestimonialsSection from '@/components/TestimonialsSection.astro';
+import FAQSection      from '@/components/FAQSection.astro';
+import FinalCTASection from '@/components/FinalCTASection.astro';
+import Footer          from '@/components/Footer.astro';
+import FloatingWA      from '@/components/FloatingWA.astro';
+---
+
+<Layout
+  title="Jasa Pengurusan SBU Konstruksi Kilat & 100% Legal | Fanatik Digital"
+  description="Urus SBU Konstruksi kilat dan 100% legal bersama Fanatik Digital. Proses tercepat, bergaransi uang kembali, langsung terbit di portal resmi pemerintah LPJK PUPR."
+>
+
+  <!-- Sticky Navbar -->
+  <Navbar />
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- 1. Hero Section -->
+    <HeroSection />
+
+    <!-- 2. Social Proof: Client Logos -->
+    <ClientLogos />
+
+    <!-- 3. Problem Identification -->
+    <ProblemSection />
+
+    <!-- 4. Solution, USP & Benefits -->
+    <SolutionSection />
+
+    <!-- 5. Workflow / Infographic -->
+    <WorkflowSection />
+
+    <!-- 6. Testimonials (Swiper.js) -->
+    <TestimonialsSection />
+
+    <!-- 7. FAQ Accordion (native details/summary) -->
+    <FAQSection />
+
+    <!-- 8. Final CTA with Urgency -->
+    <FinalCTASection />
+
+  </main>
+
+  <!-- Footer -->
+  <Footer />
+
+  <!-- Floating WhatsApp Button -->
+  <FloatingWA />
+
+</Layout>

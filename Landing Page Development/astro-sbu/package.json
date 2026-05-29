@@ -1,0 +1,24 @@
+{
+  "name": "sbu-express-fanatik-digital",
+  "version": "1.0.0",
+  "description": "SBU Express Landing Page - Fanatik Digital Agency",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.8.1",
+    "astro": "^4.11.0",
+    "aos": "^2.3.4",
+    "swiper": "^11.1.9",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7"
+  }
+}

@@ -1,0 +1,127 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Jasa Pengurusan SBU Konstruksi Kilat & 100% Legal | Fanatik Digital',
+  description = 'Urus SBU Konstruksi kilat dan 100% legal bersama Fanatik Digital. Proses tercepat, bergaransi uang kembali, langsung terbit di portal resmi pemerintah LPJK PUPR.',
+  canonical = 'https://sbu.fanatikdigital.com',
+  ogImage = '/images/og-image.png',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d2b55" />
+
+    <!-- Primary Meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content={canonical} />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={ogImage} />
+    <meta property="og:locale"      content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fanatik Digital Agency",
+        "description": "Jasa Pengurusan SBU Konstruksi Kilat",
+        "url": "https://sbu.fanatikdigital.com",
+        "telephone": "+6280000000000",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jakarta Selatan",
+          "addressCountry": "ID"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "214"
+        }
+      }
+    </script>
+
+    <!-- ════════════════════════════════════════════════════
+         ANALYTICS PLACEHOLDERS
+         Replace GTM-XXXXXXXX and G-XXXXXXXXXX before deploy
+         ════════════════════════════════════════════════════ -->
+
+    <!-- Google Tag Manager (replace GTM-XXXXXXXX) -->
+    <script is:inline>
+      /* GTM_PLACEHOLDER_START
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXXX');
+      GTM_PLACEHOLDER_END */
+    </script>
+
+    <!-- Google Analytics 4 (replace G-XXXXXXXXXX) -->
+    <script is:inline>
+      /* GA4_PLACEHOLDER_START
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      GA4_PLACEHOLDER_END */
+    </script>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body class="font-sans antialiased">
+
+    <!-- GTM noscript (replace GTM-XXXXXXXX) -->
+    <!-- noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXXX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript -->
+
+    <slot />
+
+    <!-- ════ AOS INIT ════════════════════════════════════════ -->
+    <script>
+      import AOS from 'aos';
+      import 'aos/dist/aos.css';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+          duration: 700,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 60,
+          delay: 0,
+        });
+      });
+    </script>
+  </body>
+</html>

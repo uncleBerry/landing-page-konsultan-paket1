@@ -1,0 +1,204 @@
+---
+const testimonials = [
+  {
+    name: 'Budi Santoso',
+    company: 'PT Maju Jaya Konstruksi',
+    city: 'Jakarta',
+    avatar: 'BS',
+    avatarBg: 'bg-orange-400',
+    time: '10:42',
+    result: 'SBU terbit dalam 2 hari kerja',
+    messages: [
+      { from: 'them', text: 'Halo, saya butuh SBU untuk PT saya sebelum tender minggu depan 😭' },
+      { from: 'us',   text: 'Tenang pak, kami bisa bantu proses ekspres! Berkas apa saja yang sudah siap?' },
+      { from: 'them', text: 'Alhamdulillah, SBU sudah terbit hari ini! Bisa ikut tender! Terima kasih Fanatik Digital 🙏⭐⭐⭐⭐⭐' },
+    ],
+  },
+  {
+    name: 'Dewi Rahayu',
+    company: 'CV Bangun Sejahtera',
+    city: 'Surabaya',
+    avatar: 'DR',
+    avatarBg: 'bg-blue-500',
+    time: '14:15',
+    result: 'Berhasil setelah ditolak berkali-kali',
+    messages: [
+      { from: 'them', text: 'Saya sudah coba urus sendiri tapi ditolak terus di sistem OSS 😤' },
+      { from: 'us',   text: 'Banyak klien kami juga mengalami hal ini. Izin kami cek berkas Ibu ya.' },
+      { from: 'them', text: 'WOW! Dalam 3 hari langsung terbit! Profesional banget, 5 bintang! ⭐⭐⭐⭐⭐' },
+    ],
+  },
+  {
+    name: 'Ahmad Fauzi',
+    company: 'PT Karya Mandiri',
+    city: 'Bandung',
+    avatar: 'AF',
+    avatarBg: 'bg-emerald-500',
+    time: '09:30',
+    result: 'SBU Kualifikasi Besar berhasil terbit',
+    messages: [
+      { from: 'them', text: 'Butuh SBU kualifikasi Besar, apa bisa diurus dengan cepat?' },
+      { from: 'us',   text: 'Bisa pak! Kualifikasi Besar kami tangani dengan jalur prioritas. Estimasi 5 hari kerja.' },
+      { from: 'them', text: 'Mantap! Dokumen sudah di tangan. Rekomendasi banget buat kontraktor lain! 👍' },
+    ],
+  },
+  {
+    name: 'Siti Nurhaliza',
+    company: 'PT Graha Konstruksi',
+    city: 'Semarang',
+    avatar: 'SN',
+    avatarBg: 'bg-purple-500',
+    time: '11:20',
+    result: 'Terdaftar resmi di portal LPJK',
+    messages: [
+      { from: 'them', text: 'Takut kena tipu, apa ada jaminannya kalau pakai jasa ini?' },
+      { from: 'us',   text: 'Ada garansi 100% uang kembali jika ditolak sistem pemerintah, Ibu. Kami juga bisa dikunjungi.' },
+      { from: 'them', text: 'Terbukti! Amanah dan profesional. SBU sudah bisa dicek di portal LPJK 🎉' },
+    ],
+  },
+  {
+    name: 'Rizki Pratama',
+    company: 'PT Cipta Karsa',
+    city: 'Medan',
+    avatar: 'RP',
+    avatarBg: 'bg-red-500',
+    time: '16:45',
+    result: 'Bundling SKK + SBU berhasil',
+    messages: [
+      { from: 'them', text: 'SKK saya juga belum ada, apa bisa diurus bersamaan dengan SBU?' },
+      { from: 'us',   text: 'Bisa pak! Kami punya paket bundling SKK + SBU dengan harga lebih hemat 20%.' },
+      { from: 'them', text: 'Dua-duanya sudah terbit sekarang! Ikut tender dengan percaya diri 💪 Top markotop!' },
+    ],
+  },
+  {
+    name: 'Hendra Wijaya',
+    company: 'PT Nusantara Bangun',
+    city: 'Makassar',
+    avatar: 'HW',
+    avatarBg: 'bg-yellow-500',
+    time: '08:00',
+    result: 'Proses 100% online dari Makassar',
+    messages: [
+      { from: 'them', text: 'Saya di Makassar, apa bisa diurus tanpa harus ke Jakarta?' },
+      { from: 'us',   text: '100% bisa pak! Semua proses online. Cukup kirim scan berkas via WhatsApp.' },
+      { from: 'them', text: 'Luar biasa! Dari Makassar bisa urus SBU tanpa kemana-mana. Rekomen! ⭐⭐⭐⭐⭐' },
+    ],
+  },
+];
+---
+
+<section id="testimonials" class="bg-navy-900 py-16 md:py-24 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+        Testimoni Klien
+      </span>
+      <h2 class="text-white text-3xl md:text-4xl font-extrabold mb-4">
+        Kontraktor yang Memenangkan Tender Bersama Kami
+      </h2>
+      <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+        Lebih dari 500 kontraktor telah mempercayakan pengurusan SBU mereka kepada kami.
+      </p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="testimonial-swiper swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper pb-14">
+        {testimonials.map(t => (
+          <div class="swiper-slide">
+            <!-- WhatsApp-style portrait card: aspect-[9/16] -->
+            <div class="aspect-[9/16] bg-[#e5ddd5] rounded-2xl overflow-hidden shadow-xl flex flex-col max-w-[200px] mx-auto md:max-w-none">
+
+              <!-- WA header bar -->
+              <div class="bg-[#075e54] px-4 py-3 flex items-center gap-3 shrink-0">
+                <div class={`w-9 h-9 rounded-full ${t.avatarBg} flex items-center justify-center shrink-0`}>
+                  <span class="text-white text-xs font-extrabold">{t.avatar}</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-white font-bold text-sm truncate">{t.name}</p>
+                  <p class="text-green-300 text-xs truncate">{t.company}</p>
+                </div>
+                <svg class="w-4 h-4 text-white/70 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+
+              <!-- Chat messages -->
+              <div class="flex-1 p-3 space-y-2.5 bg-[#e5ddd5] overflow-hidden">
+                {t.messages.map(msg => (
+                  <div class={`flex ${msg.from === 'us' ? 'justify-end' : 'justify-start'}`}>
+                    <div class={`max-w-[85%] rounded-xl px-3 py-2 shadow-sm text-[11px] leading-relaxed ${
+                      msg.from === 'us'
+                        ? 'bg-[#dcf8c6] text-gray-800 rounded-br-none'
+                        : 'bg-white text-gray-800 rounded-bl-none'
+                    }`}>
+                      {msg.text}
+                      <span class="block text-right text-[9px] text-gray-400 mt-0.5">{t.time}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Result badge footer -->
+              <div class="bg-emerald-600 px-4 py-3 flex items-center gap-2 shrink-0">
+                <span class="text-white text-base">✅</span>
+                <div>
+                  <p class="text-white text-xs font-bold leading-snug">{t.result}</p>
+                  <p class="text-emerald-200 text-[10px]">{t.city} · Klien Terverifikasi</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="swiper-pagination !bottom-0"></div>
+
+      <!-- Navigation arrows -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Overall rating -->
+    <div class="mt-8 text-center" data-aos="fade-up">
+      <div class="inline-flex items-center gap-4 bg-white/10 rounded-2xl px-6 py-4">
+        <span class="text-yellow-400 text-2xl" aria-hidden="true">⭐⭐⭐⭐⭐</span>
+        <div class="text-left">
+          <p class="text-white font-bold">4.9 / 5.0</p>
+          <p class="text-blue-200 text-sm">Dari 200+ ulasan terverifikasi</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Swiper JS (loaded client-side only) -->
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  new Swiper('.testimonial-swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    speed: 600,
+    spaceBetween: 16,
+    slidesPerView: 1.4,
+    centeredSlides: true,
+    autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+      640:  { slidesPerView: 2.5, spaceBetween: 20, centeredSlides: false },
+      1024: { slidesPerView: 3.5, spaceBetween: 24, centeredSlides: false },
+    },
+    a11y: { prevSlideMessage: 'Slide sebelumnya', nextSlideMessage: 'Slide berikutnya' },
+  });
+</script>
